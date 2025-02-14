@@ -24,7 +24,7 @@ def chat():
 
         # Call OpenAI API
         completion = openai.ChatCompletion.create(
-            model="ft:gpt-4o-mini-2024-07-18:personal::B0mRxvPB",
+            model="ft:gpt-4o-mini-2024-07-18:personal::B0mqcNZ9",
             messages=[{"role": "user", "content": message}]
         )
 
