@@ -9,12 +9,15 @@ CORS(app)
 # Set OpenAI API Key from environment variables
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+# Define a fallback response
+FALLBACK_RESPONSE = "I'm not sure, but I can assist you with Microchipping, Rabies, and Responsible Pet Ownership questions"
+
 @app.route("/chat", methods=["POST"])
 def chat():
     try:
         # Get the message from the request body
         data = request.get_json()
-        message = data.get("message", "")
+        message = data.get("message", "").strip()
 
         if not message:
             return jsonify({"error": "Message cannot be empty"}), 400
@@ -26,10 +29,14 @@ def chat():
         )
 
         # Extract the response text
-        response_message = completion["choices"][0]["message"]["content"]
+        response_message = completion["choices"][0]["message"]["content"].strip()
 
         # Replace "ChatGPT" and "OpenAI" with "Furbot"
         response_message = response_message.replace("ChatGPT", "Furbot").replace("OpenAI", "Furbot")
+
+        # Check if the response is vague or unrelated
+        if len(response_message.split()) < 3 or "I don't know" in response_message:
+            response_message = FALLBACK_RESPONSE
 
         return jsonify({"response": response_message})
 
