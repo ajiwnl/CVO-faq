@@ -10,6 +10,7 @@ The API utilizes a fine-tuned OpenAI GPT model:
 ## Techstack:
 
 ![Android](https://img.shields.io/badge/Android-Java-green)
+![Java](https://img.shields.io/badge/Java-17-red)
 ![Firebase](https://img.shields.io/badge/Firebase-Database-orange)
 ![React](https://img.shields.io/badge/React-18.x-blue)
 ![Vite](https://img.shields.io/badge/Vite-4.x-purple)
@@ -29,4 +30,4 @@ CVO Android Repository Link: ***[Web repo](https://github.com/soliken1/CVO-App)*
 
 CVO Web Repository Link: ***[Android repo](https://github.com/ajiwnl/CVO-Android)***
 
-CVO Python Repository Link: ***[Py Repo](https://github.com/ajiwnl/CVO-faq)***
+CVO Python Repository Link: ***[Py repo](https://github.com/ajiwnl/CVO-faq)***
