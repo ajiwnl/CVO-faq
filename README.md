@@ -1,5 +1,4 @@
-# CVO-Furbot: This is a Flask-based chatbot API that integrates with OpenAI's GPT model to provide responses to user queries. It supports CORS for cross-origin requests and includes a fallback response for vague or unrelated answers.
-
+# CVO-Furbot: This is a Flask-based chatbot API that integrates with OpenAI's GPT model to provide responses to user queries related to City Veterinary's FAQ.
 ## Model Used:
 
 The API utilizes a fine-tuned OpenAI GPT model:
